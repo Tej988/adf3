@@ -24,11 +24,11 @@ jobs:
         working-directory: ${{ github.workspace }}/ADFroot/build
 
       - name: Validate
-        run: npm run build validate ${{ github.workspace }}/ADFroot/ /subscriptions/<subID>/resourceGroups/<resourceGroupName>/providers/Microsoft.DataFactory/factories/<ADFname>
+        run: npm run build validate ${{ github.workspace }}/ADFroot/ /subscriptions/cd80669d-c886-455a-b108-8299fac678e3/resourceGroups/Tej_RG/providers/Microsoft.DataFactory/factories/devadfbytej
         working-directory: ${{ github.workspace }}/ADFroot/build
 
       - name: Validate and Generate ARM template
-        run: npm run build export ${{ github.workspace }}/ADFroot/ /subscriptions/<subID>/resourceGroups/<resourceGroupName>/providers/Microsoft.DataFactory/factories/<ADFname> "ExportedArmTemplate"
+        run: npm run build export ${{ github.workspace }}/ADFroot/ /subscriptions/cd80669d-c886-455a-b108-8299fac678e3/resourceGroups/Tej_RG/providers/Microsoft.DataFactory/factories/devadfbytej "ExportedArmTemplate"
         working-directory: ${{ github.workspace }}/ADFroot/build
 
       - name: Upload artifact
