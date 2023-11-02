@@ -35,19 +35,12 @@ jobs:
       
       - name: Get latest code
         uses: actions/checkout@v2
-      # - name: Deploy Azure Resource Manager (ARM) Template
-      #   uses: Azure/arm-deploy@v1.0.6
-      #   with:
-      #     scope: 'resourcegroup'
-      #     resourceGroupName: "Tej_RG"
-      #     template: ./devadfbytej/ARMTemplateForFactory.json
-      #     deploymentMode: Incremental
-      #     parameters: factoryName=prodadfbytej
-      - name: Data Factory Deploy
-        uses: Azure/data-factory-deploy-action@v1.2.0
+      - name: Deploy Azure Resource Manager (ARM) Template
+        uses: Azure/arm-deploy@v1.0.6
         with:
-          resourceGroupName: Tej_RG
-          dataFactoryName: devadfbytej
-          armTemplateFile: ./devadfbytej/ARMTemplateForFactory.json
-          armTemplateParametersFile: ./devadfbytej/ARMTemplateParametersForFactory.json
-          additionalParameters: 'factoryName=devadfbytej'
+          scope: 'resourcegroup'
+          resourceGroupName: "Tej_RG"
+          template: ./devadfbytej/ARMTemplateForFactory.json
+          deploymentMode: Incremental
+          parameters: factoryName=devadfbytej
+      
