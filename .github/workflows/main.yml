@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - adf_publish
 
 permissions:
   id-token: write
@@ -21,6 +21,6 @@ jobs:
         with:
           resourceGroupName: Tej_RG
           dataFactoryName: prodadfbytej
-          armTemplateFile: ARMTemplateForFactory.json
-          armTemplateParametersFile: ARMTemplateParametersForFactory.json
+          armTemplateFile: ${{github.workspacce}}/adf_publish/devadfbytej/ARMTemplateForFactory.json
+          armTemplateParametersFile: ${{github.workspacce}}/adf_publish/devadfbytej/ARMTemplateParametersForFactory.json
           additionalParameters: 'factoryName=prodadfbytej'
