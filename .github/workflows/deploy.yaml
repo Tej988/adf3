@@ -29,6 +29,6 @@ jobs:
         with:
           scope: 'resourcegroup'
           resourceGroupName: "Tej_RG"
-          template: ./ARMTemplateForFactory.json
+          template: ARMTemplateForFactory.json
           deploymentMode: Incremental
           parameters: factoryName=prodadfbytej
