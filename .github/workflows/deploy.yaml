@@ -36,3 +36,6 @@ jobs:
         run: |
           ls
           pwd
+          cd ..
+          ls
+          pwd
