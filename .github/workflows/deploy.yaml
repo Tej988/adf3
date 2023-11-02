@@ -25,7 +25,7 @@ jobs:
       #     armTemplateParametersFile: ./devadfbytej/ARMTemplateParametersForFactory.json
       #     additionalParameters: 'factoryName=prodadfbytej'
       - name: Deploy Azure Resource Manager (ARM) Template
-        uses: Azure/arm-deploy@1.0.6
+        uses: Azure/arm-deploy@v1.0.6
         with:
           scope: 'resourcegroup'
           resourceGroupName: "Tej_RG"
