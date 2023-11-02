@@ -35,3 +35,4 @@ jobs:
       - name: List Files in a Directory
         run: |
           ls
+          pwd
