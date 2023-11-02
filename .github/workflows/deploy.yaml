@@ -24,11 +24,14 @@ jobs:
       #     armTemplateFile: ./devadfbytej/ARMTemplateForFactory.json
       #     armTemplateParametersFile: ./devadfbytej/ARMTemplateParametersForFactory.json
       #     additionalParameters: 'factoryName=prodadfbytej'
-      - name: Deploy Azure Resource Manager (ARM) Template
-        uses: Azure/arm-deploy@v1.0.6
-        with:
-          scope: 'resourcegroup'
-          resourceGroupName: "Tej_RG"
-          template: ARMTemplateForFactory.json
-          deploymentMode: Incremental
-          parameters: factoryName=prodadfbytej
+      # - name: Deploy Azure Resource Manager (ARM) Template
+      #   uses: Azure/arm-deploy@v1.0.6
+      #   with:
+      #     scope: 'resourcegroup'
+      #     resourceGroupName: "Tej_RG"
+      #     template: ARMTemplateForFactory.json
+      #     deploymentMode: Incremental
+      #     parameters: factoryName=prodadfbytej
+        - name: List Files in a Directory
+          run: |
+            ls ./adf3
