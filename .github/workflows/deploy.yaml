@@ -32,6 +32,6 @@ jobs:
       #     template: ARMTemplateForFactory.json
       #     deploymentMode: Incremental
       #     parameters: factoryName=prodadfbytej
-        - name: List Files in a Directory
-          run: |
-            ls ./adf3
+      - name: List Files in a Directory
+        run: |
+          ls
