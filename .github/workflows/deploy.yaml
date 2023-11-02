@@ -1,0 +1,26 @@
+on:
+  push:
+    branches:
+      - adf_publish
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Azure login
+        uses: azure/login@v1.4.6
+        with:
+          creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+
+      - name: Data Factory Deploy
+        uses: Azure/data-factory-deploy-action@v1.2.0
+        with:
+          resourceGroupName: Tej_RG
+          dataFactoryName: prodadfbytej
+          armTemplateFile: ./adf3/ARMTemplateForFactory.json
+          armTemplateParametersFile: ./adf3/ARMTemplateParametersForFactory.json
+          additionalParameters: 'factoryName=prodadfbytej'
